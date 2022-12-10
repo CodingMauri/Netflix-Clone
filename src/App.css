@@ -1,38 +1,59 @@
-.App {
-  text-align: center;
+.App{
+
+  width:100vw;
+  height:100vh;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.nav-container{
+  padding:15px 1rem 0.5rem 15px;
+  display:inline-flex;
+  flex-direction: space-around;
+  gap:3rem;
   align-items: center;
+  
+}
+
+.nav-bar{
+  width:100vw;
+  height:10vh;
+  background-color: lightblue;
+  
+}
+.profile-cntnr{
+  
+}  
+
+.hero-cntnr{
+  width:100vw;
+  height:50vh;
+  
+  background-color: aliceblue;
+}
+
+.movie-hero{
+  display:flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items:center;
+  height:inherit;
 }
 
-.App-link {
-  color: #61dafb;
+/********************************************************************************
+
+MOVIE CAROUSEL
+
+
+***********************************************************/
+.movies{
+  width:100vw;
+  height:25vh;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.movies p{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: inherit;
+  
 }
