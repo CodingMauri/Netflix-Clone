@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import MovieData from '../assets/MovieData';
 import { useState } from 'react';
 import GetMovies from './GetMovies';
+import Poster from './Poster';
 export default function MovieCarousel() {
   const [movies,setMovies] = useState([])
 
@@ -24,14 +25,10 @@ export default function MovieCarousel() {
     <div className = "movies">
       <Slider className = "movie-carousel" {...settings} >
           <GetMovies setMovies = {setMovies} />
-            {movies.map((value ) => {
-              return (
-                <div key ={value.id}>
-                  <img className = "movie-poster" src = {value.backdrop_path} />
-                </div>
-              )
-            })}
-          
+            {movies ? movies.map((movie, index) => (
+              <Poster key = {index} movie = {movie} />
+            )): <div style = {{color:"white"}}>Loading...</div>}
+      
 
       </Slider>
       

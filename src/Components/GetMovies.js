@@ -7,7 +7,7 @@ const GetMovies = ({setMovies}) => {
   const fetchMovies = () => {
     axios
       .get(url)
-      .then((res) => setMovies(res.data))
+      .then((res) => setMovies(res.data.results))
       .catch((err) => console.log(err));
   };
 
