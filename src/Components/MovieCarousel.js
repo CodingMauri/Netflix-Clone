@@ -2,11 +2,12 @@ import React from 'react'
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import MovieData from '../assets/MovieData';
 import { useState } from 'react';
-import GetMovies from './GetMovies';
+import GetMovies from '../GetData';
 import Poster from './Poster';
 export default function MovieCarousel() {
+
+  
   const [movies,setMovies] = useState([])
 
   
