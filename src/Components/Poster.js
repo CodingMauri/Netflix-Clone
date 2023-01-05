@@ -1,12 +1,12 @@
 import React from 'react'
-
-export default function Poster({movie}) {
-
-
-    const ImagePath = "https://image.tmdb.org/t/p/w500/" ;
+import { DataContext } from '../DataContext'
+import { useContext } from 'react'
+import {motion} from "framer-motion"
+export default function Poster({movies}) {
+    const {imagePath} = useContext(DataContext)
   return (
-    <div className = "poster-cntnr">
-        <img className = "poster" src = {ImagePath + movie.poster_path} />
-    </div>
+    <motion.div className="poster-cntnr" >
+      <img className = "poster" src = {imagePath + movies.poster_path} alt = "loading"/>
+    </motion.div>
   )
 }

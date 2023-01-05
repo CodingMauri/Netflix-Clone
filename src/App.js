@@ -5,25 +5,30 @@ import { DataContext } from "./DataContext";
 import { useState } from "react";
 function App() {
   
-  const [trendingMovies, setTrendingMovies] = useState([])
-
   const searchOptions = {
     movieKey: process.env.REACT_APP_MOVIE_KEY,
     api: "https://api.themoviedb.org/3/",
     language: "language=en-US",
   };
-  
+
+  const imagePath = "https://image.tmdb.org/t/p/original";
+
   return (
-    <DataContext.Provider value={{searchOptions}}>
-      <div className="App">
+    <div className="App">
+      <DataContext.Provider value={{ searchOptions, imagePath }}>
         <Routes>
-          <Route path="/" element={<Home 
-            setTrendingMovies  = {setTrendingMovies}
-            trendingMovies = {trendingMovies}
-          />} />
+          <Route
+            path="/"
+            element={
+              <Home
+               
+              />
+            }
+          />
+       
         </Routes>
-      </div>
-    </DataContext.Provider>
+      </DataContext.Provider>
+    </div>
   );
 }
 

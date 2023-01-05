@@ -77,6 +77,16 @@ MOVIE CAROUSEL
   height: inherit;
   
 }
+.trending-header{
+  display:flex;
+  justify-content: flex-start;
+  font-size:3.3rem;
+  color:white;
+  padding:2rem;
+  font-weight:500;
+
+  
+}
 
 /********************************************************************************
 
@@ -90,9 +100,14 @@ POSTER
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
+  width:90%;
+  height:25%;
+  padding:1rem;
+  
 }
 
-.poster{
- width:inherit;
- height:inherit;
+ img.poster {
+  width:inherit;
+  height: inherit;
 }
